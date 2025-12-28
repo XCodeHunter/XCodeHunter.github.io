@@ -14,77 +14,77 @@
     }
 
     body {
-      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
-      color: #fff;
       min-height: 100vh;
+      background: linear-gradient(135deg, #0b0b0b, #1a1a1a);
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      color: #fff;
     }
 
     .container {
       width: 90%;
-      max-width: 400px;
+      max-width: 420px;
       text-align: center;
     }
 
     h1 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
+      font-size: 1.9rem;
+      margin-bottom: 25px;
     }
 
     .carousel {
       overflow: hidden;
-      position: relative;
-      border-radius: 16px;
+      border-radius: 18px;
+      background: #242424;
     }
 
     .slides {
       display: flex;
-      transition: transform 0.4s ease;
+      transition: transform 0.4s ease-in-out;
     }
 
     .slide {
       min-width: 100%;
-      padding: 30px 20px;
-      background: #262626;
+      padding: 35px 22px;
     }
 
     .slide h2 {
+      color: #ff4d6d;
+      margin-bottom: 12px;
       font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: #ff5f8f;
     }
 
     .slide p {
       font-size: 1rem;
-      line-height: 1.4;
+      line-height: 1.45;
+      opacity: 0.95;
     }
 
     .controls {
-      margin-top: 15px;
       display: flex;
       justify-content: space-between;
+      margin-top: 18px;
     }
 
     button {
-      background: #ff5f8f;
+      background: #ff4d6d;
       border: none;
-      padding: 10px 20px;
-      border-radius: 20px;
       color: #fff;
+      padding: 10px 22px;
+      border-radius: 25px;
       font-size: 0.9rem;
       cursor: pointer;
     }
 
     button:active {
-      transform: scale(0.95);
+      transform: scale(0.96);
     }
 
     .cta {
-      margin-top: 25px;
-      font-size: 0.9rem;
-      opacity: 0.8;
+      margin-top: 28px;
+      font-size: 0.95rem;
+      opacity: 0.85;
     }
   </style>
 </head>
@@ -95,30 +95,32 @@
 
     <div class="carousel">
       <div class="slides" id="slides">
+        
         <div class="slide">
           <h2>🏐 Dupla vitalícia no futevôlei</h2>
-          <p>Você nunca mais joga sozinho. Eu cubro, levanto e comemoro com você.</p>
+          <p>Fechou parceria pra sempre. Eu jogo junto, incentivo e comemoro cada ponto.</p>
+        </div>
+
+        <div class="slide">
+          <h2>🖤 Jogos do Timão garantidos</h2>
+          <p>Companhia eterna pra sofrer, vibrar e xingar o juiz — quando minha pontuação estiver boa 😉</p>
         </div>
 
         <div class="slide">
           <h2>💬 Conversas que fluem</h2>
-          <p>Do “oi” às risadas sinceras. Sem papo vazio, só conexão real.</p>
+          <p>Sem silêncio constrangedor. Do meme ao assunto sério, tudo encaixa.</p>
         </div>
 
         <div class="slide">
-          <h2>➕ Alguém que soma</h2>
-          <p>Leve, presente e sem joguinhos cansativos. Só o que faz bem.</p>
+          <h2>😏 Flertes que não esfriam</h2>
+          <p>Provocação na medida certa, química real e vontade de continuar.</p>
         </div>
 
         <div class="slide">
-          <h2>☀️ Momentos simples</h2>
-          <p>Um café, um pôr do sol, uma caminhada… comigo vira memória boa.</p>
+          <h2>☀️ Presença que soma</h2>
+          <p>Leve nos dias bons, firme nos dias difíceis. Sempre do seu lado.</p>
         </div>
 
-        <div class="slide">
-          <h2>🔥 A química ainda existe</h2>
-          <p>A gente sabe. Fingir que não sente dá mais trabalho do que tentar.</p>
-        </div>
       </div>
     </div>
 
@@ -128,7 +130,7 @@
     </div>
 
     <div class="cta">
-      Talvez a gente só precise voltar onde parou 😉
+      Talvez a gente só precise voltar a se escolher 😉
     </div>
   </div>
 
@@ -147,10 +149,4 @@
     }
 
     function prevSlide() {
-      index = (index - 1 + total) % total;
-      updateSlide();
-    }
-  </script>
-
-</body>
-</html>
+      index = (index - 1 + total) % tot
