@@ -1,203 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Me dá mais uma chance?</title>
-<style>
-  body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* Imagem de fundo */
-    background: url('Screenshot_20210220-160414.jpg') no-repeat center center/cover;
-    font-family: "Poppins", sans-serif;
-    color: #fff;
-    overflow: hidden;
-    text-align: center;
-    position: relative;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Os 5 motivos</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
 
-    body::before {
-    content: '';
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: rgba(0,0,0,0.3); /* Ajuste opacidade conforme desejar */
-    z-index: 0;
-  }
+    body {
+      background: radial-gradient(circle at top, #1b0f14, #000);
+      color: #fff;
+      min-height: 100vh;
+    }
 
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-    position: relative;
-    z-index: 1; /* Para ficar acima do overlay */
-  }
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 28px 20px 48px;
+    }
 
-  .buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    max-width: 400px;
-    position: relative;
-    height: 80px;
-    z-index: 1;
-  }
+    .badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
 
-  button {
-    padding: 15px 35px;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    z-index: 2;
-    position: relative;
-  }
+    h1 {
+      font-size: 30px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
 
-  #yes {
-    background-color: #ff5c8a;
-    color: white;
-  }
+    .subtitle {
+      font-size: 16px;
+      opacity: 0.85;
+      margin-bottom: 34px;
+    }
 
-  #yes:hover {
-    transform: scale(1.1);
-  }
+    .card {
+      background: rgba(255,255,255,0.07);
+      border-radius: 18px;
+      padding: 22px;
+      margin-bottom: 18px;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
 
-  #no {
-    background-color: #fff;
-    color: #ff5c8a;
-  }
+    .card span {
+      font-size: 13px;
+      opacity: 0.6;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-  #no:hover {
-    transform: scale(1.05);
-  }
+    .card h2 {
+      font-size: 19px;
+      margin: 10px 0;
+    }
 
-  #coupon {
-    margin-top: 50px;
-    font-size: 1.1rem;
-    background: rgba(255,255,255,0.2);
-    padding: 15px 25px;
-    border-radius: 15px;
-    display: none;
-    animation: fadeIn 0.8s ease forwards;
-    position: relative;
-    z-index: 1;
-  }
+    .card p {
+      font-size: 15px;
+      line-height: 1.55;
+      opacity: 0.92;
+    }
 
-  #love-message {
-    display: none;
-    font-size: 2rem;
-    margin-top: 30px;
-    opacity: 0;
-    animation: fadeInGlow 2s ease forwards;
-    position: relative;
-    z-index: 1;
-  }
+    .cta {
+      margin-top: 36px;
+      text-align: center;
+    }
 
-  @keyframes fadeIn {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
-  }
+    .cta button {
+      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+      border: none;
+      color: #fff;
+      font-size: 17px;
+      padding: 16px 30px;
+      border-radius: 999px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: 600;
+    }
 
-  @keyframes fadeInGlow {
-    from {opacity: 0; text-shadow: 0 0 0px #fff;}
-    to {opacity: 1; text-shadow: 0 0 20px #fff;}
-  }
-
-  .heart {
-    position: absolute;
-    bottom: 0;
-    font-size: 24px;
-    color: rgba(255,255,255,0.8);
-    animation: floatUp 6s linear infinite;
-  }
-
-  @keyframes floatUp {
-    0% {transform: translateY(0) scale(1);}
-    100% {transform: translateY(-100vh) scale(1.5); opacity: 0;}
-  }
-
-  @media (max-width: 600px) {
-    h1 { font-size: 1.5rem; }
-    button { padding: 12px 25px; font-size: 1rem; }
-    #coupon { font-size: 1rem; margin: 25px; }
-    #love-message { font-size: 1.5rem; }
-  }
-</style>
+    .cta small {
+      display: block;
+      margin-top: 14px;
+      opacity: 0.65;
+      font-size: 13px;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Giovanna, eu não quero te perder. Me dá a chance de recomeçar ao seu lado?</h1>
+  <div class="container">
+    <div class="badge">⚠️ Conteúdo provocante</div>
 
-<div class="buttons">
-  <button id="yes">Sim 💖</button>
-  <button id="no">Não 😢</button>
-</div>
+    <h1>
+      Os 5 motivos<br>
+      pra você voltar a flertar comigo
+    </h1>
 
-<div id="coupon">
-  💌 Seu cupom de felicidade está disponível! <br>
-  Basta mandar <strong>casco10</strong> para o WhatsApp 💬
-</div>
+    <p class="subtitle">
+      Aviso justo: depois disso,<br>
+      fingir indiferença vai ficar difícil.
+    </p>
 
-<div id="love-message">Gosto muito, muito de você ❤️</div>
+    <div class="card">
+      <span>Motivo 1</span>
+      <h2>Eu sei provocar sem pedir nada em troca</h2>
+      <p>
+        Não imploro atenção. Eu crio vontade.
+        E você sempre soube a diferença.
+      </p>
+    </div>
 
-<script>
-  const yesBtn = document.getElementById('yes');
-  const noBtn = document.getElementById('no');
-  const coupon = document.getElementById('coupon');
-  const loveMessage = document.getElementById('love-message');
-  const body = document.body;
+    <div class="card">
+      <span>Motivo 2</span>
+      <h2>Meu interesse é claro, não desesperado</h2>
+      <p>
+        Eu demonstro. Mas também sei recuar.
+        Isso costuma mexer mais do que insistir.
+      </p>
+    </div>
 
-  // Botão "Sim"
-  yesBtn.addEventListener('click', () => {
-    coupon.style.display = 'block';
-    createHearts(25);
-    setTimeout(() => { loveMessage.style.display = 'block'; }, 1500);
-  });
+    <div class="card">
+      <span>Motivo 3</span>
+      <h2>Eu leio seus sinais melhor do que você imagina</h2>
+      <p>
+        O jeito que você some. O jeito que volta.
+        Eu percebo. E gosto do jogo quando ele é mútuo.
+      </p>
+    </div>
 
-  // Botão "Não" foge mas nunca some
-  noBtn.addEventListener('mouseover', moveButton);
-  noBtn.addEventListener('touchstart', moveButton);
+    <div class="card">
+      <span>Motivo 4</span>
+      <h2>Comigo, o flerte não fica só na conversa</h2>
+      <p>
+        A química pede presença, olhar e aproximação.
+        E você sabe que isso sempre foi o ponto forte.
+      </p>
+    </div>
 
-  function moveButton() {
-    const btnWidth = noBtn.offsetWidth;
-    const btnHeight = noBtn.offsetHeight;
+    <div class="card">
+      <span>Motivo 5</span>
+      <h2>Você ainda pensa em mim mais do que admite</h2>
+      <p>
+        Se não pensasse, não estaria lendo até aqui.
+        Simples assim.
+      </p>
+    </div>
 
-    // Obter limites da viewport para garantir que o botão fique visível
-    const maxX = window.innerWidth - btnWidth - 10;
-    const maxY = window.innerHeight - btnHeight - 10;
-
-    const randomX = Math.random() * maxX;
-    const randomY = Math.random() * maxY;
-
-    noBtn.style.position = 'fixed'; // FIXED para respeitar a viewport inteira
-    noBtn.style.left = `${randomX}px`;
-    noBtn.style.top = `${randomY}px`;
-  }
-
-  // Corações animados
-  function createHearts(num) {
-    for(let i=0;i<num;i++){
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.innerHTML='❤️';
-      heart.style.left=Math.random()*100+'vw';
-      heart.style.animationDuration=(3+Math.random()*3)+'s';
-      heart.style.fontSize=(20+Math.random()*20)+'px';
-      body.appendChild(heart);
-      setTimeout(()=>heart.remove(),6000);
-    }
-  }
-</script>
+    <div class="cta">
+      <button>Voltar a flertar comigo</button>
+      <small>
+        *Clicar não é obrigatório.<br>
+        Responder a mensagem é.
+      </small>
+    </div>
+  </div>
 
 </body>
 </html>
