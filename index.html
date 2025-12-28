@@ -1,172 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Os 5 motivos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Volta a flertar comigo</title>
+
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
     }
 
     body {
-      background: radial-gradient(circle at top, #1b0f14, #000);
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
       color: #fff;
       min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .container {
-      max-width: 420px;
-      margin: 0 auto;
-      padding: 28px 20px 48px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: linear-gradient(90deg, #ff416c, #ff4b2b);
-      color: #fff;
-      padding: 6px 16px;
-      border-radius: 999px;
-      font-size: 12px;
-      margin-bottom: 18px;
-      font-weight: 600;
-    }
-
-    h1 {
-      font-size: 30px;
-      line-height: 1.15;
-      margin-bottom: 18px;
-    }
-
-    .subtitle {
-      font-size: 16px;
-      opacity: 0.85;
-      margin-bottom: 34px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.07);
-      border-radius: 18px;
-      padding: 22px;
-      margin-bottom: 18px;
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .card span {
-      font-size: 13px;
-      opacity: 0.6;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .card h2 {
-      font-size: 19px;
-      margin: 10px 0;
-    }
-
-    .card p {
-      font-size: 15px;
-      line-height: 1.55;
-      opacity: 0.92;
-    }
-
-    .cta {
-      margin-top: 36px;
+      width: 90%;
+      max-width: 400px;
       text-align: center;
     }
 
-    .cta button {
-      background: linear-gradient(90deg, #ff416c, #ff4b2b);
-      border: none;
-      color: #fff;
-      font-size: 17px;
-      padding: 16px 30px;
-      border-radius: 999px;
-      cursor: pointer;
-      width: 100%;
-      font-weight: 600;
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
     }
 
-    .cta small {
-      display: block;
-      margin-top: 14px;
-      opacity: 0.65;
-      font-size: 13px;
+    .carousel {
+      overflow: hidden;
+      position: relative;
+      border-radius: 16px;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      padding: 30px 20px;
+      background: #262626;
+    }
+
+    .slide h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #ff5f8f;
+    }
+
+    .slide p {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .controls {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      background: #ff5f8f;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      color: #fff;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    .cta {
+      margin-top: 25px;
+      font-size: 0.9rem;
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <div class="badge">⚠️ Conteúdo provocante</div>
+    <h1>5 motivos pra você voltar a flertar comigo</h1>
 
-    <h1>
-      Os 5 motivos<br>
-      pra você voltar a flertar comigo
-    </h1>
+    <div class="carousel">
+      <div class="slides" id="slides">
+        <div class="slide">
+          <h2>🏐 Dupla vitalícia no futevôlei</h2>
+          <p>Você nunca mais joga sozinho. Eu cubro, levanto e comemoro com você.</p>
+        </div>
 
-    <p class="subtitle">
-      Aviso justo: depois disso,<br>
-      fingir indiferença vai ficar difícil.
-    </p>
+        <div class="slide">
+          <h2>💬 Conversas que fluem</h2>
+          <p>Do “oi” às risadas sinceras. Sem papo vazio, só conexão real.</p>
+        </div>
 
-    <div class="card">
-      <span>Motivo 1</span>
-      <h2>Eu sei provocar sem pedir nada em troca</h2>
-      <p>
-        Não imploro atenção. Eu crio vontade.
-        E você sempre soube a diferença.
-      </p>
+        <div class="slide">
+          <h2>➕ Alguém que soma</h2>
+          <p>Leve, presente e sem joguinhos cansativos. Só o que faz bem.</p>
+        </div>
+
+        <div class="slide">
+          <h2>☀️ Momentos simples</h2>
+          <p>Um café, um pôr do sol, uma caminhada… comigo vira memória boa.</p>
+        </div>
+
+        <div class="slide">
+          <h2>🔥 A química ainda existe</h2>
+          <p>A gente sabe. Fingir que não sente dá mais trabalho do que tentar.</p>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <span>Motivo 2</span>
-      <h2>Meu interesse é claro, não desesperado</h2>
-      <p>
-        Eu demonstro. Mas também sei recuar.
-        Isso costuma mexer mais do que insistir.
-      </p>
-    </div>
-
-    <div class="card">
-      <span>Motivo 3</span>
-      <h2>Eu leio seus sinais melhor do que você imagina</h2>
-      <p>
-        O jeito que você some. O jeito que volta.
-        Eu percebo. E gosto do jogo quando ele é mútuo.
-      </p>
-    </div>
-
-    <div class="card">
-      <span>Motivo 4</span>
-      <h2>Comigo, o flerte não fica só na conversa</h2>
-      <p>
-        A química pede presença, olhar e aproximação.
-        E você sabe que isso sempre foi o ponto forte.
-      </p>
-    </div>
-
-    <div class="card">
-      <span>Motivo 5</span>
-      <h2>Você ainda pensa em mim mais do que admite</h2>
-      <p>
-        Se não pensasse, não estaria lendo até aqui.
-        Simples assim.
-      </p>
+    <div class="controls">
+      <button onclick="prevSlide()">←</button>
+      <button onclick="nextSlide()">→</button>
     </div>
 
     <div class="cta">
-      <button>Voltar a flertar comigo</button>
-      <small>
-        *Clicar não é obrigatório.<br>
-        Responder a mensagem é.
-      </small>
+      Talvez a gente só precise voltar onde parou 😉
     </div>
   </div>
+
+  <script>
+    let index = 0;
+    const slides = document.getElementById("slides");
+    const total = slides.children.length;
+
+    function updateSlide() {
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      index = (index + 1) % total;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      index = (index - 1 + total) % total;
+      updateSlide();
+    }
+  </script>
 
 </body>
 </html>
